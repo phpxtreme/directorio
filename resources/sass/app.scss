@@ -1,0 +1,30 @@
+// Fonts
+@import "~font-awesome/css/font-awesome.css";
+@import "~roboto-fontface/css/roboto/roboto-fontface.css";
+// Bootstrap 4
+@import "variables";
+@import '~bootstrap/scss/bootstrap';
+
+html, body {
+  background-color: $light;
+}
+
+main {
+  background-color: $white;
+}
+
+a {
+  color: $dark;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+}

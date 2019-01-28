@@ -15,7 +15,7 @@
             <div class="container">
                 <a href="{{ route('home') }}" class="navbar-brand d-flex align-items-center">
                     <i class="fa fa-phone-square fa-3x"></i>
-                    &nbsp;Directorio Telefónico
+                    &nbsp;{{ __('general.00') }}
                 </a>
             </div>
         </nav>
@@ -23,7 +23,7 @@
     <main class="container border-right border-left p-4">
         <form action="">
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="Criterio de búsqueda..." autofocus>
+                <input class="form-control" type="text" placeholder="{{ __('general.01') }}" autofocus>
                 <div class="input-group-prepend">
                     <button class="btn btn-success">
                         <i class="fa fa-search"></i>
@@ -51,7 +51,7 @@
                         <div class="list-group">
                             <a href="#" class="list-group-item list-group-item-action active border-top-0 rounded-0">
                                 <span class="pull-left">
-                                    Todos
+                                    {{ __('general.03') }}
                                 </span>
                             </a>
                             @foreach(range('A', 'Z') as $indice)
@@ -75,7 +75,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb pt-1 pb-1">
                         <li class="breadcrumb-item pull-right active">
-                            <small><i class="fa fa-angle-double-right"></i> Mostrando resultados para: <strong>Todos</strong></small>
+                            <small><i class="fa fa-angle-double-right"></i> {{ __('general.04') }} <strong>Todos</strong></small>
                         </li>
                     </ol>
                 </nav>
@@ -84,9 +84,7 @@
         </div>
     </main>
     <footer class="py-2 bg-gradient-success text-center">
-        <a href="{{ route('home') }}" class="text-white">
-            Copyright © MicroFlex
-        </a>
+        <a href="{{ route('home') }}" class="text-white"></a>
     </footer>
     @yield('javascript')
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>

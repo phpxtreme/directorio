@@ -17,6 +17,11 @@
                     <i class="fa fa-phone-square fa-3x"></i>
                     &nbsp;{{ __('general.00') }}
                 </a>
+                <div class="pull-right">
+                    <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        <img src="{{ asset('images/flags/en.png') }}" alt="English"> {{ __('general.0') }}
+                    </button>
+                </div>
             </div>
         </nav>
     </header>

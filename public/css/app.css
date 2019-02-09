@@ -8153,13 +8153,16 @@ input[type="button"].btn-block {
   background-color: #bd2130;
 }
 
-.badge-light {
+.badge-light,
+.list-group-item.active .badge {
   color: #212529;
   background-color: #f8f9fa;
 }
 
 .badge-light[href]:hover,
-.badge-light[href]:focus {
+.list-group-item.active .badge[href]:hover,
+.badge-light[href]:focus,
+.list-group-item.active .badge[href]:focus {
   color: #212529;
   text-decoration: none;
   background-color: #dae0e5;
@@ -13080,6 +13083,12 @@ a:visited {
   text-decoration: none;
 }
 
+.btn:focus,
+.btn:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -13087,13 +13096,13 @@ a:visited {
 }
 
 .list-group-item:hover {
-  font-weight: bold;
+  font-weight: 700;
   border-color: transparent;
-  background-color: #81c784 !important;
+  background-color: rgba(40, 167, 69, 0.3) !important;
 }
 
 .list-group-item.active {
-  font-weight: bold;
+  font-weight: 700;
   border-color: transparent;
   background-color: #28a745 !important;
 }

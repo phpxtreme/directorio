@@ -25,6 +25,13 @@ a {
   }
 }
 
+.btn {
+  &:focus,
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
 .form-control {
   &:focus {
     box-shadow: none;
@@ -32,14 +39,20 @@ a {
   }
 }
 
-.list-group-item:hover {
-  font-weight: bold;
-  border-color: transparent;
-  background-color: #81c784 !important;
-}
+.list-group-item {
+  &:hover {
+    font-weight: $font-weight-bold;
+    border-color: transparent;
+    background-color: rgba($success, .300) !important;
+  }
 
-.list-group-item.active {
-  font-weight: bold;
-  border-color: transparent;
-  background-color: $success !important;
+  &.active {
+    font-weight: $font-weight-bold;
+    border-color: transparent;
+    background-color: $success !important;
+  }
+
+  &.active .badge {
+    @extend .badge-light
+  }
 }

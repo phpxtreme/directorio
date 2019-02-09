@@ -25,11 +25,21 @@ a {
   }
 }
 
-.form-control:focus {
-  box-shadow: none;
+.form-control {
+  &:focus {
+    box-shadow: none;
+    border-color: $success;
+  }
+}
+
+.list-group-item:hover {
+  font-weight: bold;
+  border-color: transparent;
+  background-color: #81c784 !important;
 }
 
 .list-group-item.active {
+  font-weight: bold;
   border-color: transparent;
   background-color: $success !important;
 }

@@ -28,3 +28,8 @@ a {
 .form-control:focus {
   box-shadow: none;
 }
+
+.list-group-item.active {
+  border-color: transparent;
+  background-color: $success !important;
+}

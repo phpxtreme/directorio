@@ -13085,3 +13085,8 @@ a:visited {
           box-shadow: none;
 }
 
+.list-group-item.active {
+  border-color: transparent;
+  background-color: #28a745 !important;
+}
+

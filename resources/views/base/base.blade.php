@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Directorio Telefónico</title>
+    <title>{{ __('general.00') }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/0.ico') }}"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @yield('stylesheet')
@@ -12,7 +12,7 @@
 <body class="container p-0 mt-5 mb-5">
     <header>
         <nav class="navbar navbar-expand-sm bg-gradient-success navbar-dark py-2">
-            <div class="container">
+            <div class="container-fluid">
                 <a href="{{ route('home') }}" class="navbar-brand d-flex align-items-center">
                     <i class="fa fa-phone-square fa-3x"></i>
                     &nbsp;{{ __('general.00') }}
@@ -23,7 +23,7 @@
     <main class="container border-right border-left p-4">
         <form action="">
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="{{ __('general.01') }}" autofocus>
+                <input class="form-control rounded-0" type="text" placeholder="{{ __('general.01') }}" autofocus>
                 <div class="input-group-prepend">
                     <button class="btn btn-success">
                         <i class="fa fa-search"></i>
@@ -40,11 +40,6 @@
                             <i class="fa fa-sort-alpha-asc"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" id="institutions-tab" data-toggle="tab" role="tab" aria-controls="institutions" href="#institutions">
-                            <i class="fa fa-institution"></i>
-                        </a>
-                    </li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane show active" id="alphabetic" role="tabpanel" aria-labelledby="alphabetic-tab">
@@ -53,9 +48,12 @@
                                 <span class="pull-left">
                                     {{ __('general.03') }}
                                 </span>
+                                <span class="pull-right">
+                                    <span class="badge">0</span>
+                                </span>
                             </a>
                             @foreach(range('A', 'Z') as $indice)
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action rounded-0">
                                     <span class="pull-left">
                                         {{ $indice }}
                                     </span>
@@ -75,7 +73,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb pt-1 pb-1">
                         <li class="breadcrumb-item pull-right active">
-                            <small><i class="fa fa-angle-double-right"></i> {{ __('general.04') }} <strong>Todos</strong></small>
+                            <small><i class="fa fa-angle-double-right"></i> {{ __('general.04') }} <strong>{{ __('general.03') }}</strong></small>
                         </li>
                     </ol>
                 </nav>

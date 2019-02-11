@@ -30,6 +30,15 @@
                             </div>
                         </div>
                     </form>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="badge badge-light">
+                            @foreach($languages as $language)
+                                <a href="#" title="{{ $language['name'] }}">
+                                    <img src="{{ asset('images/flags/'.$language['flag'].'.png') }}" alt="">
+                                </a>
+                            @endforeach
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -56,13 +65,7 @@
     <footer class="py-2 bg-gradient-success text-center">
         <a href="#" class="back-to-top text-white"></a>
         <div class="row">
-            <div class="col-sm-4">
-                <a href="{{ route('home') }}" class="text-white">EXAMPLE</a>
-            </div>
-            <div class="col-sm-4">
-                <a href="{{ route('home') }}" class="text-white">EXAMPLE</a>
-            </div>
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <a href="{{ route('home') }}" class="text-white">EXAMPLE</a>
             </div>
         </div>

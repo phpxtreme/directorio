@@ -4,7 +4,7 @@
         <ol class="breadcrumb pt-1 pb-1">
             <li class="breadcrumb-item active">
                 <small>
-                    <i class="fa fa-angle-double-right"></i> {{ __('general.05') }}
+                    <i class="fa fa-angle-double-right"></i> {{ __('general.02') }}
                 </small>
             </li>
             <li class="ml-auto">

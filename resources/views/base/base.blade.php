@@ -33,7 +33,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="badge badge-light">
                             @foreach($languages as $language)
-                                <a href="#" title="{{ $language['name'] }}">
+                                <a href="{{ route('lang', [$language['flag']]) }}" title="{{ $language['name'] }}">
                                     <img src="{{ asset('images/flags/'.$language['flag'].'.png') }}" alt="">
                                 </a>
                             @endforeach

@@ -13100,7 +13100,7 @@ a:visited {
 
 .list-group-item:hover:not(.active) {
   font-weight: 700;
-  background-color: rgba(0, 123, 255, 0.15) !important;
+  background-color: rgba(40, 167, 69, 0.15) !important;
 }
 
 .list-group-item.active {

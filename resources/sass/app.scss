@@ -43,7 +43,7 @@ a {
 
   &:hover:not(.active) {
     font-weight: $font-weight-bold;
-    background-color: rgba($primary, .150) !important;
+    background-color: rgba($success, .150) !important;
   }
 
   &.active {

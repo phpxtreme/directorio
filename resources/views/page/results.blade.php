@@ -4,8 +4,8 @@
         <ol class="breadcrumb pt-1 pb-1">
             <li class="breadcrumb-item active">
                 <small>
-                    <i class="fa fa-angle-double-right"></i> {{ __('general.04') }}
-                    <strong>{{ __('general.03') }}</strong>
+                    <i class="fa fa-angle-double-right"></i> {{ __('general.03') }}
+                    <strong></strong>
                 </small>
             </li>
             <li class="ml-auto">
@@ -18,6 +18,6 @@
     </nav>
     <div class="alert alert-danger" role="alert">
         <i class="fa fa-info-circle"></i>
-        &nbsp;No se encuentran resultados para la búsqueda.
+        &nbsp;{{ __('general.04') }}
     </div>
 @endsection

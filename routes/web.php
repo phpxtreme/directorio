@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'CoreController@run')->name('home');
+
+Route::get('lang/{lang}', 'LanguageController@set')->name('lang');

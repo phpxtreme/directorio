@@ -7,5 +7,5 @@ return [
     '02' => 'Search',
     '03' => 'All',
     '04' => 'Showing results for: ',
-    '05' => 'Login',
+    '05' => 'Home',
 ];

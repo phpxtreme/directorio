@@ -15,11 +15,6 @@ return [
         'flag'   => 'de',
         'name'   => 'Deutsch',
         'active' => true
-    ],
-    [
-        'flag'   => 'ru',
-        'name'   => 'русский',
-        'active' => true
     ]
 ];
 

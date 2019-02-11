@@ -35,7 +35,6 @@ a {
 .form-control {
   &:focus {
     box-shadow: none;
-    border-color: $success;
   }
 }
 
@@ -44,8 +43,7 @@ a {
 
   &:hover:not(.active) {
     font-weight: $font-weight-bold;
-    border-color: transparent;
-    background-color: rgba($success, .300) !important;
+    background-color: rgba($primary, .150) !important;
   }
 
   &.active {

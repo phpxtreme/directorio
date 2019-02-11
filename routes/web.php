@@ -11,4 +11,4 @@
 |
 */
 
-Route::view('/', 'page.home')->name('home');
+Route::get('/', 'CoreController@run')->name('home');

@@ -70,34 +70,6 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 mb-3">
-            <div class="card">
-                <h6 class="card-header">
-                    <i class="fa fa-search"></i>
-                    Featured
-                </h6>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 mb-3">
-            <div class="card">
-                <h6 class="card-header">
-                    <i class="fa fa-clock-o"></i>
-                    Featured
-                </h6>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">Card Header</div>
@@ -109,7 +81,24 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">A</div>
+                    <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">
+                        <table class="table table-sm table-striped">
+                            <thead>
+                            </thead>
+                            <tbody>
+                            @foreach($prefixes as $prefix)
+                                <tr>
+                                    <td>
+                                        {{ $prefix['name'] }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $prefix['prefix'] }}
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="card-footer text-right">
                     <a href="#">{{ __('general.07') }}</a>

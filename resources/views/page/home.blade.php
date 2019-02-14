@@ -103,7 +103,7 @@
                 <div class="card-header">Card Header</div>
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active rounded-0 border-top-0" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">
+                        <a class="nav-link py-1 px-2 active rounded-0 border-top-0" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">
                             <img src="{{ asset('images/flags/en.png') }}" alt="">
                         </a>
                     </li>

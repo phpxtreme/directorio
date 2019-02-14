@@ -31,9 +31,9 @@
                         </div>
                     </form>
                     <ul class="navbar-nav ml-auto">
-                        <li class="badge badge-light">
+                        <li class="badge badge-light rounded-0">
                             @foreach($languages as $language)
-                                <a href="{{ route('lang', [$language['flag']]) }}" title="{{ $language['name'] }}">
+                                <a href="{{ route('setLanguage', [$language['flag']]) }}" title="{{ $language['name'] }}">
                                     <img src="{{ asset('images/flags/'.$language['flag'].'.png') }}" alt="">
                                 </a>
                             @endforeach
@@ -45,7 +45,7 @@
     </header>
     <main class="container border-right border-left">
         <div class="row">
-            <div class="col-sm-3 p-2">
+            <div class="col-sm-3 p-2 index">
                 <div class="list-group">
                     @foreach(range('A', 'Z') as $indice)
                         <a href="#" class="list-group-item list-group-item-action">
@@ -58,6 +58,21 @@
                 </div>
             </div>
             <div class="col-sm-9 border-left p-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-1 pb-1">
+                        <li class="breadcrumb-item active">
+                            <small>
+                                <i class="fa fa-angle-double-right"></i> {{ __('general.02') }}
+                            </small>
+                        </li>
+                        <li class="ml-auto">
+                            <small>
+                                <i class="fa fa-hourglass-half"></i>
+                                {{ round((microtime(true) - LARAVEL_START), 4) }} ms
+                            </small>
+                        </li>
+                    </ol>
+                </nav>
                 @yield('content')
             </div>
         </div>
@@ -65,9 +80,7 @@
     <footer class="py-2 bg-gradient-success text-center">
         <a href="#" class="back-to-top text-white"></a>
         <div class="row">
-            <div class="col-sm-12">
-                <a href="{{ route('home') }}" class="text-white">EXAMPLE</a>
-            </div>
+            <div class="col-sm-12"></div>
         </div>
     </footer>
     @yield('javascript')

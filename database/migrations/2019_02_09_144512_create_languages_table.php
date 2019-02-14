@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateLanguagesTable extends Migration
 {
-    /**Languages Table
+    /**
+     * Languages Table
      *
      * @var string
      */

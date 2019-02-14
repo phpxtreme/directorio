@@ -38,6 +38,10 @@ a {
   }
 }
 
+.index {
+  background-color: $gray-100;
+}
+
 .list-group-item {
   border-radius: 0 !important;
 
@@ -58,7 +62,7 @@ a {
 
   &.active::before {
     font-family: FontAwesome;
-    content: '\f054';
+    content: '\f101';
   }
 }
 

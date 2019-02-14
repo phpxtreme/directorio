@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.combine([
+mix.babel([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'resources/js/app.js',

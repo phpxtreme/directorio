@@ -13094,6 +13094,10 @@ a:visited {
           box-shadow: none;
 }
 
+.index {
+  background-color: #f8f9fa;
+}
+
 .list-group-item {
   border-radius: 0 !important;
 }
@@ -13111,7 +13115,7 @@ a:visited {
 
 .list-group-item.active::before {
   font-family: FontAwesome;
-  content: '\F054';
+  content: '\F101';
 }
 
 .back-to-top {

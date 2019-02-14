@@ -19,6 +19,7 @@ class CountriesTableSeeder extends Seeder
             Country::create([
                 'name'   => $country['name'],
                 'code'   => $country['code'],
+                'flag'   => $country['flag'],
                 'active' => $country['active']
             ]);
         }, $countries);

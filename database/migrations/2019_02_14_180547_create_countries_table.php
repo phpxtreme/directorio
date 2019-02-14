@@ -29,6 +29,9 @@ class CreateCountriesTable extends Migration
             $table->string('code')
                 ->nullable(false);
 
+            $table->string('flag')
+                ->nullable(false);
+
             $table->boolean('active')
                 ->default(true);
 

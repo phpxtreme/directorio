@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </form>
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav mr-auto">
                         <li class="badge badge-light rounded-0">
                             @foreach($languages as $language)
                                 <a href="{{ route('setLanguage', [$language['flag']]) }}" title="{{ $language['name'] }}">
@@ -43,9 +43,9 @@
             </div>
         </nav>
     </header>
-    <main class="container border-right border-left">
+    <main class="container border-right border-left border-success">
         <div class="row">
-            <div class="col-sm-3 p-2 index">
+            <div class="col-sm-3 p-0 index">
                 <div class="list-group">
                     @foreach(range('A', 'Z') as $indice)
                         <a href="#" class="list-group-item list-group-item-action">
@@ -57,7 +57,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-sm-9 border-left p-4">
+            <div class="col-sm-9 p-4 border-left border-success">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb pt-1 pb-1">
                         <li class="breadcrumb-item active">

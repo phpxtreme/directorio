@@ -51,18 +51,13 @@ a {
   }
 
   &.active {
+    @extend .bg-success;
     font-weight: $font-weight-bold;
     border-color: transparent;
-    background-color: $success !important;
   }
 
   &.active .badge {
     @extend .badge-light
-  }
-
-  &.active::before {
-    font-family: FontAwesome;
-    content: '\f101';
   }
 }
 

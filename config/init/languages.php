@@ -15,6 +15,11 @@ return [
         'flag'   => 'de',
         'name'   => 'Deutsch',
         'active' => true
+    ],
+    [
+        'flag'   => 'fr',
+        'name'   => 'Française',
+        'active' => true,
     ]
 ];
 

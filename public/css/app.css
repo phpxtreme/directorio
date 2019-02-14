@@ -9491,14 +9491,19 @@ button.bg-secondary:focus {
   background-color: #545b62 !important;
 }
 
-.bg-success {
+.bg-success,
+.list-group-item.active {
   background-color: #28a745 !important;
 }
 
 a.bg-success:hover,
+a.list-group-item.active:hover,
 a.bg-success:focus,
+a.list-group-item.active:focus,
 button.bg-success:hover,
-button.bg-success:focus {
+button.list-group-item.active:hover,
+button.bg-success:focus,
+button.list-group-item.active:focus {
   background-color: #1e7e34 !important;
 }
 
@@ -13110,12 +13115,6 @@ a:visited {
 .list-group-item.active {
   font-weight: 700;
   border-color: transparent;
-  background-color: #28a745 !important;
-}
-
-.list-group-item.active::before {
-  font-family: FontAwesome;
-  content: '\F101';
 }
 
 .back-to-top {

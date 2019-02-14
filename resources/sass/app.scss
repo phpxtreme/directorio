@@ -4,84 +4,9 @@
 // Bootstrap 4
 @import "variables";
 @import '~bootstrap/scss/bootstrap';
-
-html, body {
-  background-color: $gray-200;
-}
-
-main {
-  background-color: $white;
-}
-
-a {
-  color: $dark;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:visited {
-    text-decoration: none;
-  }
-}
-
-.btn {
-  &:focus,
-  &:active {
-    box-shadow: none !important;
-  }
-}
-
-.form-control {
-  &:focus {
-    box-shadow: none;
-  }
-}
-
-.index {
-  background-color: $gray-100;
-}
-
-.list-group-item {
-  border-radius: 0 !important;
-
-  &:hover:not(.active) {
-    font-weight: $font-weight-bold;
-    background-color: rgba($success, .150) !important;
-  }
-
-  &.active {
-    @extend .bg-success;
-    font-weight: $font-weight-bold;
-    border-color: transparent;
-  }
-
-  &.active .badge {
-    @extend .badge-light
-  }
-}
-
-.back-to-top {
-  right: 30px;
-  z-index: 99;
-  bottom: 20px;
-  border: none;
-  padding: 10px;
-  outline: none;
-  display: none;
-  position: fixed;
-  text-align: center;
-  background-color: $success;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &::after {
-    font-family: FontAwesome;
-    content: '\f077';
-    font-size: 18px;
-    font-style: normal;
-    font-weight: normal;
-  }
-}
+// Application Styles
+@import "base/base";
+@import "override/cards";
+@import "override/forms";
+@import "override/lists";
+@import "layout/footer";

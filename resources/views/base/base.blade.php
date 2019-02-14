@@ -45,7 +45,7 @@
     </header>
     <main class="container border-right border-left border-success">
         <div class="row">
-            <div class="col-sm-3 p-0 index">
+            <div class="col-sm-3 p-0">
                 <div class="list-group">
                     @foreach(range('A', 'Z') as $indice)
                         <a href="#" class="list-group-item list-group-item-action">

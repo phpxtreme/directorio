@@ -1,0 +1,18 @@
+.list-group-item {
+  border-radius: 0 !important;
+
+  &:hover:not(.active) {
+    font-weight: $font-weight-bold;
+    background-color: rgba($success, .150) !important;
+  }
+
+  &.active {
+    @extend .bg-success;
+    font-weight: $font-weight-bold;
+    border-color: transparent;
+  }
+
+  &.active .badge {
+    @extend .badge-light
+  }
+}

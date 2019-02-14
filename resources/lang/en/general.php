@@ -6,5 +6,8 @@ return [
     '01' => 'Search criteria...',
     '02' => 'Home',
     '03' => 'Showing results for: ',
-    '04' => 'No results found for the search.'
+    '04' => 'No results found for the search.',
+    '05' => 'Code',
+    '06' => 'Country',
+    '07' => 'more...'
 ];

@@ -24,5 +24,11 @@ return [
         'code'   => '+33',
         'flag'   => 'fr',
         'active' => true
+    ],
+    [
+        'name'   => 'United States',
+        'code'   => '+1',
+        'flag'   => 'eu',
+        'active' => true
     ]
 ];

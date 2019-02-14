@@ -13088,6 +13088,39 @@ a:visited {
   text-decoration: none;
 }
 
+.card > .table {
+  border-right: 0;
+  border-left: 0;
+  margin-bottom: 0;
+}
+
+.card > .table:last-child {
+  border-bottom: 0;
+}
+
+.card > .table td:first-child,
+.card > .table th:first-child {
+  border-left: 0;
+}
+
+.card > .table td:last-child,
+.card > .table th:last-child {
+  border-right: 0;
+}
+
+.card > .table tr:first-child td,
+.card > .table tr:first-child th {
+  border-top: 0;
+}
+
+.card > .table tr:last-child td {
+  border-bottom: 0;
+}
+
+.card .card-header + .table {
+  border-top: 0;
+}
+
 .btn:focus,
 .btn:active {
   -webkit-box-shadow: none !important;
@@ -13097,10 +13130,6 @@ a:visited {
 .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-.index {
-  background-color: #f8f9fa;
 }
 
 .list-group-item {

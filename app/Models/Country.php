@@ -41,4 +41,12 @@ class Country extends Model
         'updated_at',
         'deleted_at'
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function prefixes()
+    {
+        return $this->hasMany(Prefix::class);
+    }
 }

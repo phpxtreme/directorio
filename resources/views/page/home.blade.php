@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-sm-4 mb-3">
             <div class="card text-white bg-gradient-secondary rounded-0">
-                <div class="card-header">Header</div>
+                <div class="card-header text-center">Header</div>
                 <div class="card-body text-center">
                     <h1 class="card-title total-records">100</h1>
                 </div>
@@ -11,7 +11,7 @@
         </div>
         <div class="col-sm-4 mb-3">
             <div class="card text-white bg-gradient-secondary rounded-0">
-                <div class="card-header">Header</div>
+                <div class="card-header text-center">Header</div>
                 <div class="card-body text-center">
                     <h1 class="card-title total-records">200</h1>
                 </div>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-sm-4 mb-3">
             <div class="card text-white bg-gradient-secondary rounded-0">
-                <div class="card-header">Header</div>
+                <div class="card-header text-center">Header</div>
                 <div class="card-body text-center">
                     <h1 class="card-title total-records">300</h1>
                 </div>
@@ -32,8 +32,7 @@
             <div class="card">
                 <div class="card-header">Card Header</div>
                 <table class="table table-sm table-striped">
-                    <thead>
-                    </thead>
+                    <thead></thead>
                     <tbody>
                     @foreach($countries as $country)
                         <tr>
@@ -74,24 +73,28 @@
             <div class="card">
                 <div class="card-header">Card Header</div>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link py-1 px-2 active rounded-0 border-top-0" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">
-                            <img src="{{ asset('images/flags/en.png') }}" alt="">
-                        </a>
-                    </li>
+                    @foreach($prefixes as $prefix)
+                        <li class="nav-item">
+                            <a class="nav-link py-1 px-2 rounded-0 border-top-0" id="{{ $prefix->country->flag }}-tab" data-toggle="tab" role="tab" aria-controls="{{ $prefix->country->flag }}" aria-selected="true">
+                                <img src="{{ asset('images/flags/'.$prefix->country->flag.'.png') }}" alt="">
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" role="tabpanel">
                         <table class="table table-sm table-striped">
-                            <thead>
-                            </thead>
+                            <thead></thead>
                             <tbody>
                             @foreach($prefixes as $prefix)
-                                <tr>
-                                    <td>
+                                <tr class="d-flex">
+                                    <td class="col-sm-10">
                                         {{ $prefix['name'] }}
                                     </td>
-                                    <td class="text-center">
+                                    <td class="col-sm-2">
+                                        <span class="text-primary">
+                                            (+{{ $prefix->country->code }})
+                                        </span>
                                         {{ $prefix['prefix'] }}
                                     </td>
                                 </tr>

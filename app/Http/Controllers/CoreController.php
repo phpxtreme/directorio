@@ -6,6 +6,7 @@ use App\Models\Country;
 use App\Models\Language;
 use App\Models\Prefix;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class CoreController extends Controller
 {
@@ -16,23 +17,22 @@ class CoreController extends Controller
 
         $data['languages'] = Language::where([
             'active' => true
-        ])
-            ->take(4)
+        ])->take(4)
             ->orderBy('name', 'ASC')
-            ->get();
+            ->get(['flag', 'name']);
 
         $data['countries'] = Country::where([
             'active' => true
         ])->take(5)
-            ->orderBy('name', 'ASC')
+            ->orderBy('code', 'ASC')
             ->get(['flag', 'name', 'code']);
 
-        $data['prefixes'] = Prefix::where([
-            'active' => true
-        ])->take(10)
+        $data['prefixes'] = Prefix::with(['country'])
+            ->where(['active' => true])
+            ->take(10)
             ->orderBy('name', 'ASC')
-            ->get(['name', 'prefix']);
+            ->get(['name', 'prefix', 'country_id']);
 
-        return view('page.home', $data);
+        return View::make('page.home')->with($data);
     }
 }

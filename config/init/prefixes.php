@@ -87,12 +87,17 @@ return [
         2 => [
             [
                 'name'   => 'Madrid',
-                'prefix' => 1,
+                'prefix' => 91,
                 'active' => true
             ],
             [
                 'name'   => 'Barcelona',
-                'prefix' => 2,
+                'prefix' => 93,
+                'active' => true
+            ],
+            [
+                'name'   => 'Málaga',
+                'prefix' => 95,
                 'active' => true
             ]
         ]

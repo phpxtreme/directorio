@@ -29,16 +29,21 @@ class CoreController extends Controller
             ->get(['flag', 'name', 'code']);
 
         // Prefixes
-        $countries = [1, 2, 3];
+        $countries = Country::with('prefixes')
+            ->has('prefixes')->get()
+            ->map(function ($country) {
+                return $country->only('id');
+            })->pluck('id');
 
         $data['prefixes'] = Country::with([
             'prefixes' => function ($query) {
                 return $query->where(['active' => true])
                     ->orderBy('prefix', 'ASC');
             }
-        ])->whereHas('prefixes', function ($query) use ($countries) {
-            return $query->whereIn('country_id', $countries);
-        })->get(['id', 'name', 'flag', 'code']);
+        ])->where(['active' => true])
+            ->whereHas('prefixes', function ($query) use ($countries) {
+                return $query->whereIn('country_id', $countries);
+            })->get(['id', 'name', 'flag', 'code']);
 
         return View::make('page.home')->with($data);
     }

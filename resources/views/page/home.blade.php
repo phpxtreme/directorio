@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-sm-6 mb-3">
             <div class="card">
-                <div class="card-header">Card Header</div>
+                <div class="card-header">Header</div>
                 <table class="table table-sm table-striped">
                     <tbody>
                     @foreach($countries as $country)
@@ -55,10 +55,7 @@
         </div>
         <div class="col-sm-6 mb-3">
             <div class="card">
-                <h6 class="card-header">
-                    <i class="fa fa-clock-o"></i>
-                    Featured
-                </h6>
+                <div class="card-header">Header</div>
                 <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -70,9 +67,9 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">Card Header</div>
+                <div class="card-header">Header</div>
                 <ul class="nav nav-tabs" role="tablist">
-                    @foreach($prefixes as $country)
+                    @foreach($prefixes->take(20) as $country)
                         <li class="nav-item">
                             <a href="#{{ $country->flag }}" class="nav-link py-1 px-2 rounded-0 border-top-0 {{ $loop->first ? 'active' : '' }}" id="{{ $country->flag }}-tab" data-toggle="tab" role="tab" aria-controls="{{ $country->flag }}" aria-selected="{{ $loop->first ? 'true' : '' }}">
                                 <img src="{{ asset('images/flags/'.$country->flag.'.png') }}" alt="{{ $country->name }}" title="{{ $country->name }}">

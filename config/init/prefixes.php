@@ -100,6 +100,13 @@ return [
                 'prefix' => 95,
                 'active' => true
             ]
+        ],
+        3 => [
+            [
+                'name'   => 'Berlin',
+                'prefix' => 30,
+                'active' => true
+            ]
         ]
     ]
 ];

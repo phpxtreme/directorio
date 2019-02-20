@@ -32,7 +32,6 @@
             <div class="card">
                 <div class="card-header">Card Header</div>
                 <table class="table table-sm table-striped">
-                    <thead></thead>
                     <tbody>
                     @foreach($countries as $country)
                         <tr>
@@ -73,35 +72,36 @@
             <div class="card">
                 <div class="card-header">Card Header</div>
                 <ul class="nav nav-tabs" role="tablist">
-                    @foreach($prefixes as $prefix)
+                    @foreach($prefixes as $country)
                         <li class="nav-item">
-                            <a class="nav-link py-1 px-2 rounded-0 border-top-0" id="{{ $prefix->country->flag }}-tab" data-toggle="tab" role="tab" aria-controls="{{ $prefix->country->flag }}" aria-selected="true">
-                                <img src="{{ asset('images/flags/'.$prefix->country->flag.'.png') }}" alt="">
+                            <a href="#{{ $country->flag }}" class="nav-link py-1 px-2 rounded-0 border-top-0" id="{{ $country->flag }}-tab" data-toggle="tab" role="tab" aria-controls="{{ $country->flag }}" aria-selected="false">
+                                <img src="{{ asset('images/flags/'.$country->flag.'.png') }}" alt="{{ $country->name }}">
                             </a>
                         </li>
                     @endforeach
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" role="tabpanel">
-                        <table class="table table-sm table-striped">
-                            <thead></thead>
-                            <tbody>
-                            @foreach($prefixes as $prefix)
-                                <tr class="d-flex">
-                                    <td class="col-sm-10">
-                                        {{ $prefix['name'] }}
-                                    </td>
-                                    <td class="col-sm-2">
-                                        <span class="text-primary">
-                                            (+{{ $prefix->country->code }})
-                                        </span>
-                                        {{ $prefix['prefix'] }}
-                                    </td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+                    @foreach($prefixes as $country)
+                        <div class="tab-pane fade" role="tabpanel" id="{{ $country->flag }}">
+                            <table class="table table-sm table-striped">
+                                <tbody>
+                                @foreach($country->prefixes as $prefix)
+                                    <tr class="d-flex">
+                                        <td class="col-sm-10">
+                                            {{ $prefix->name }}
+                                        </td>
+                                        <td class="col-sm-2">
+                                            <span class="text-primary">
+                                                (+{{ ($country->code) }})
+                                            </span>
+                                            {{ $prefix->prefix }}
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="card-footer text-right">
                     <a href="#">{{ __('general.07') }}</a>

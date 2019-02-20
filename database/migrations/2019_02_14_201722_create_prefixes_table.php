@@ -29,7 +29,7 @@ class CreatePrefixesTable extends Migration
             $table->string('name')
                 ->nullable(false);
 
-            $table->string('prefix')
+            $table->integer('prefix')
                 ->nullable(false);
 
             $table->boolean('active')

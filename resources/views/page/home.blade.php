@@ -74,7 +74,7 @@
                 <ul class="nav nav-tabs" role="tablist">
                     @foreach($prefixes as $country)
                         <li class="nav-item">
-                            <a href="#{{ $country->flag }}" class="nav-link py-1 px-2 rounded-0 border-top-0" id="{{ $country->flag }}-tab" data-toggle="tab" role="tab" aria-controls="{{ $country->flag }}" aria-selected="false">
+                            <a href="#{{ $country->flag }}" class="nav-link py-1 px-2 rounded-0 border-top-0 {{ $loop->first ? 'active' : '' }}" id="{{ $country->flag }}-tab" data-toggle="tab" role="tab" aria-controls="{{ $country->flag }}" aria-selected="{{ $loop->first ? 'true' : '' }}">
                                 <img src="{{ asset('images/flags/'.$country->flag.'.png') }}" alt="{{ $country->name }}">
                             </a>
                         </li>
@@ -82,10 +82,10 @@
                 </ul>
                 <div class="tab-content">
                     @foreach($prefixes as $country)
-                        <div class="tab-pane fade" role="tabpanel" id="{{ $country->flag }}">
+                        <div class="tab-pane show {{ $loop->first ? 'active' : '' }}" role="tabpanel" id="{{ $country->flag }}">
                             <table class="table table-sm table-striped">
                                 <tbody>
-                                @foreach($country->prefixes as $prefix)
+                                @foreach($country->prefixes->take(10) as $prefix)
                                     <tr class="d-flex">
                                         <td class="col-sm-10">
                                             {{ $prefix->name }}

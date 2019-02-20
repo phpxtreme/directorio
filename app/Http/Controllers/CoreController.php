@@ -33,12 +33,12 @@ class CoreController extends Controller
 
         $data['prefixes'] = Country::with([
             'prefixes' => function ($query) {
-                return $query->orderBy('prefix', 'ASC');
+                return $query->where(['active' => true])
+                    ->orderBy('prefix', 'ASC');
             }
         ])->whereHas('prefixes', function ($query) use ($countries) {
             return $query->whereIn('country_id', $countries);
-        })->take(20)
-            ->get(['id', 'name', 'flag', 'code']);
+        })->get(['id', 'name', 'flag', 'code']);
 
         return View::make('page.home')->with($data);
     }

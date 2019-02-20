@@ -89,6 +89,11 @@ return [
                 'name'   => 'Madrid',
                 'prefix' => 1,
                 'active' => true
+            ],
+            [
+                'name'   => 'Barcelona',
+                'prefix' => 2,
+                'active' => true
             ]
         ]
     ]

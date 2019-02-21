@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Session;
 
 class LanguagesController extends Controller
 {
+    /**
+     * Set session language
+     *
+     * @param Request $request
+     * @param         $language
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function set(Request $request, $language)
     {
         if (Language::where(['flag' => $language, 'active' => true])->exists()) {

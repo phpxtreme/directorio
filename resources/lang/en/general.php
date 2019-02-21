@@ -9,5 +9,7 @@ return [
     '04' => 'No results found for the search.',
     '05' => 'Code',
     '06' => 'Country',
-    '07' => 'more...'
+    '07' => 'more...',
+    '08' => 'Not Found!',
+    '09' => 'Sorry, the requested URL does not exist or is temporarily disabled.'
 ];

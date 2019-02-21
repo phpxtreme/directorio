@@ -82,7 +82,7 @@
                         <div class="tab-pane show {{ $loop->first ? 'active' : '' }}" role="tabpanel" id="{{ $country->flag }}">
                             <table class="table table-sm table-striped">
                                 <tbody>
-                                @foreach($country->prefixes->take(10) as $prefix)
+                                @foreach($country->prefixes->take(20) as $prefix)
                                     <tr class="d-flex">
                                         <td class="col-sm-10">
                                             {{ $prefix->name }}

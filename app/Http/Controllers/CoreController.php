@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
-use App\Models\Language;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -13,13 +12,6 @@ class CoreController extends Controller
     {
         /** @var array $data */
         $data = [];
-
-        // Languages
-        $data['languages'] = Language::where([
-            'active' => true
-        ])->take(4)
-            ->orderBy('name', 'ASC')
-            ->get(['flag', 'name']);
 
         // Countries
         $data['countries'] = Country::where([

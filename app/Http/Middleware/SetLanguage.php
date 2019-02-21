@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 
-class Languages
+class SetLanguage
 {
     /**
      * Handle an incoming request.

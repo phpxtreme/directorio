@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CountryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,15 @@
 |
 */
 
-Route::get('/', 'CoreController@run')->name('home');
+// Unauthenticated
 
-Route::get('lang/{lang}', 'LanguagesController@set')->name('setLanguage');
+Route::view('/', 'page.home', [
+    'prefixes'  => (new CountryController())->prefixes(),
+    'countries' => (new CountryController())->countries(),
+])->name('home');
+
+Route::view('login', 'page.login')->name('login');
+Route::view('about', 'page.about')->name('about');
+Route::get('lang/{lang}', 'LanguageController@set')->name('setLanguage');
+
+// Administration

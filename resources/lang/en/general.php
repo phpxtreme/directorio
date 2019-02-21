@@ -11,5 +11,7 @@ return [
     '06' => 'Country',
     '07' => 'more...',
     '08' => 'Not Found!',
-    '09' => 'Sorry, the requested URL does not exist or is temporarily disabled.'
+    '09' => 'Sorry, the requested URL does not exist or is temporarily disabled.',
+    '10' => 'About',
+    '11' => 'Login',
 ];

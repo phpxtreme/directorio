@@ -32,7 +32,7 @@
                     </form>
                     <ul class="navbar-nav mr-auto">
                         <li class="badge badge-light rounded-0">
-                            @foreach($languages as $language)
+                            @foreach($languages->take(4) as $language)
                                 <a href="{{ route('setLanguage', [$language['flag']]) }}" title="{{ $language['name'] }}">
                                     <img src="{{ asset('images/flags/'.$language['flag'].'.png') }}" alt="">
                                 </a>

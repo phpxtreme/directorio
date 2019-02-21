@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
-class LanguagesController extends Controller
+class LanguageController extends Controller
 {
     /**
      * Set session language

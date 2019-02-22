@@ -79,9 +79,6 @@
     </main>
     <footer class="py-2 bg-gradient-success text-center">
         <a href="#" class="back-to-top text-white"></a>
-        <div class="row">
-            <div class="col-sm-12"></div>
-        </div>
     </footer>
     @yield('javascript')
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>

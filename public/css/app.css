@@ -13088,6 +13088,11 @@ a:visited {
   text-decoration: none;
 }
 
+.page-title {
+  margin-bottom: 1rem !important;
+  border-bottom: 1px solid #28a745 !important;
+}
+
 .card > .table,
 .tab-pane > .table {
   border-right: 0;
